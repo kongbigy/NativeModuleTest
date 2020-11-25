@@ -117,7 +117,7 @@ const emitter = new NativeEventEmitter(RNConsole);
                       const subscription = DeviceEventEmitter.addListener(
                         'my_event', 
                         (evt) => {
-                          // console.log('event', evt);
+                          console.log('event', evt);
                           if( this.state.eventCount+1 === 10 ) {
                             DeviceEventEmitter.removeAllListeners();
                           }

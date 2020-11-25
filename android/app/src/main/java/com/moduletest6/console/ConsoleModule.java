@@ -44,7 +44,7 @@ public class ConsoleModule extends ReactContextBaseJavaModule {
         WritableMap obj = Arguments.createMap();
         obj.putString("value", "my val1");
         sendEvent(reactContext, "my_event", obj);
-        sec ++;
+        sec++;
         if (sec != 10) {
           handler.postDelayed(this, 1000);
         }
@@ -65,7 +65,7 @@ public class ConsoleModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void writeTextWithPromise(String text, Promise promise) {
     if (text.equals("Error")) {
-      promise.reject("Error", "Text is Error");
+      promise.reject("Text is Error");
     } else {
       promise.resolve(text);
     }
